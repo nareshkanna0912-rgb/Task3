@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>TaskFlow</h1>
+            <p>Organize your day, one task at a time.</p>
+        </header>
+
+        <form id="taskForm">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+                aria-label="New task"
+                maxlength="150"
+                required
+            >
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        <div class="filters" aria-label="Task filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+        <ul id="taskList" aria-label="Tasks"></ul>
+
+        <p id="emptyMessage">No tasks available.</p>
+
+        <footer>
+            <span id="taskCount">0 tasks remaining</span>
+
+            <button id="clearCompleted" type="button">
+                Clear Completed
+            </button>
+        </footer>
+
+    </main>
+
+</body>
+</html>
